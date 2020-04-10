@@ -1,6 +1,11 @@
 import math
 
-# -调用函数
+# -内置函数[abs() dict() help() min() setattr() all() dir() hex() next() slice() any() divmod() id() object() sorted() ascii() enumerate() input() oct() staticmethod() bin() eval() int() open() str() bool() exec() isinstance() ord() sum() bytearray() filter() issubclass() pow() super() bytes() float() iter() print() tuple() callable() format() len() property() type() chr() frozenset() list() range() vars() classmethod() getattr() locals() repr() zip() compile() globals() map() reversed() __import__() complex() hasattr() max() round() delattr() hash() memoryview() set() ]
+
+
+# -调用常用python内置函数
+# help()
+print('help(input):', help(input))
 # abs() | max() | min() | hex()
 print(abs(-100))  # 100
 
@@ -8,6 +13,10 @@ t = (-1, 1, 3, 2)
 print('max, min is: %s, %s', (max(t), min(t)))  # (3, -1)
 
 print(hex(255), hex(-65535))  # 0xff -0xffff
+
+# range()
+for x in range(10, 30, 5):
+    print(x)
 
 # 数据类型转换
 print(int('1234'))

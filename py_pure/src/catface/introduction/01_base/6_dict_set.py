@@ -37,7 +37,7 @@ def _19_dict():
 
     # 2. copy() --> 得到dict副本
 
-    # 3. fromkeys()
+    # 3. fromkeys(, *, default_value)
     d = {}.fromkeys(['name', 'age'])
     print(d)  # {'name': None, 'age': None}
 

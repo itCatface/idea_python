@@ -1,0 +1,39 @@
+--------- beginning of crash
+05-14 15:57:14.847   304   304 F libc    : CANNOT LINK EXECUTABLE "/system/bin/flavor": library "vendor.sprd.hardware.radio.flavor@1.0.so" not found
+05-14 15:57:14.847   304   304 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 304 (flavor), pid 304 (flavor)
+05-14 15:57:15.455   367   367 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+05-14 15:57:15.455   367   367 F DEBUG   : Native Crash TIME: 19979
+05-14 15:57:15.455   367   367 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+05-14 15:57:15.455   367   367 F DEBUG   : Build fingerprint: 'SPRD/sl8541e_1h10_gofu_osea/sl8541e_1h10_go:8.1.0/OPM2.171019.012/19210:userdebug/test-keys'
+05-14 15:57:15.456   367   367 F DEBUG   : Revision: '0'
+05-14 15:57:15.456   367   367 F DEBUG   : ABI: 'arm'
+05-14 15:57:15.456   367   367 F DEBUG   : pid: 304, tid: 304, name: flavor  >>> /system/bin/flavor <<<
+05-14 15:57:15.456   367   367 F DEBUG   : signal 6 (SIGABRT), code -6 (SI_TKILL), fault addr --------
+05-14 15:57:15.461   367   367 F DEBUG   : Abort message: 'CANNOT LINK EXECUTABLE "/system/bin/flavor": library "vendor.sprd.hardware.radio.flavor@1.0.so" not found'
+05-14 15:57:15.461   367   367 F DEBUG   :     r0 00000000  r1 00000130  r2 00000006  r3 00000008
+05-14 15:57:15.461   367   367 F DEBUG   :     r4 00000130  r5 00000130  r6 be9f174c  r7 0000010c
+05-14 15:57:15.461   367   367 F DEBUG   :     r8 00000000  r9 be9f1770  sl be9f19e0  fp b39e1010
+05-14 15:57:15.461   367   367 F DEBUG   :     ip be9f29ec  sp be9f1738  lr b3a4f117  pc b3a4d660  cpsr 20000030
+05-14 15:57:15.540   367   367 F DEBUG   : 
+05-14 15:57:15.540   367   367 F DEBUG   : backtrace:
+05-14 15:57:15.540   367   367 F DEBUG   :     #00 pc 0005f660  /system/bin/linker (__dl_abort+63)
+05-14 15:57:15.541   367   367 F DEBUG   :     #01 pc 00010271  /system/bin/linker (__dl___linker_init+2816)
+05-14 15:57:15.541   367   367 F DEBUG   :     #02 pc 00014fb0  /system/bin/linker (_start+4)
+--------- beginning of system
+05-14 16:41:00.000   681   681 I chatty  : uid=1000 system_server expire 11 lines
+05-14 16:41:00.784   241   246 I chatty  : uid=0(root) /system/bin/ylog expire 18 lines
+05-14 16:41:02.808   241   244 I chatty  : uid=0(root) ylogmonitor expire 10 lines
+05-14 16:41:09.736   681   849 I chatty  : uid=1000(system) android.anim expire 4 lines
+05-14 16:41:14.445   979   979 D PowerUI : buckets   .....20 .. 15 .. 10
+05-14 16:41:14.445   979   979 D PowerUI : level          50 --> 50
+05-14 16:41:14.445   979   979 D PowerUI : status         2 --> 2
+05-14 16:41:14.445   979   979 D PowerUI : plugType       2 --> 2
+05-14 16:41:14.445   979   979 D PowerUI : invalidCharger 0 --> 0
+05-14 16:41:14.445   979   979 D PowerUI : bucket         1 --> 1
+05-14 16:41:14.445   681  1162 I chatty  : uid=1000(system) PowerController expire 22 lines
+05-14 16:41:14.446   979   979 D PowerUI : plugged        true --> true
+05-14 16:41:14.446   979   979 D PowerUI : health         2 --> 2
+05-14 16:41:22.811   241   244 I chatty  : uid=0(root) ylogmonitor expire 24 lines
+05-14 16:41:25.049   241   246 I chatty  : uid=0(root) /system/bin/ylog expire 36 lines
+05-14 16:41:30.649   241   253 I chatty  : uid=1000(system) /system/bin/ylog expire 11 lines
+05-14 16:41:52.450   979   979 D PowerUI : buckets   .....20 .. 15 .. 10

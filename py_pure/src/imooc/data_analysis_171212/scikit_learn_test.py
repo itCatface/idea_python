@@ -9,8 +9,7 @@ def main():
     print(iris)
     print(iris['data'])
     # 1. 数据域处理
-    train_data, test_data, train_target, test_target = train_test_split(iris.data, iris.target, test_size=0.2,
-                                                                        random_state=1)
+    train_data, test_data, train_target, test_target = train_test_split(iris.data, iris.target, test_size=0.2, random_state=1)
     # 2. 建模
     clf = tree.DecisionTreeClassifier(criterion='entropy')
     clf.fit(train_data, train_target)

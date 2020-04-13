@@ -1,5 +1,10 @@
 # -list
 def test_list():
+    # 声明方式
+    l1 = ['name', 'age']
+    l2 = list(range(1, 5))
+    print(type(l1), type(l2))
+
     # list是可变、有序集合，且元素不必是同一类型，可随时添加和删除元素
     info = []  # 空的list
     print('info:', info, " | info's length:", len(info))  # info: []  | info's length: 0
@@ -76,6 +81,11 @@ def test_list():
 
 # -tuple
 def test_tuple():
+    # 声明方式
+    t1 = ('name', 'age')
+    t2 = tuple(range(2, 6))
+    print(type(t1), type(t2))
+
     # tuple是不可变的list，没有append、insert、info[index] = -1等修改操作
     # tuple的每个个元素，指向永远不变，但若某个元素指向一个list，就不能指向其他对象，但这个指向的list本身是可变的
     info = ('zhangsan', 'lisi', 19, 57.46, True, None)
@@ -94,8 +104,7 @@ def test_tuple():
     values = (1, 2, [3, 4, 5], 6)
     print(values)  # (1, 2, [3, 4, 5], 6)
     values[-2][1] = 99
-    print(values)  # (1, 2, [3, 99, 5], 6)
-    # tuple的第三个元素是个list，但是list中每个元素的指向是可变的
+    print(values)  # (1, 2, [3, 99, 5], 6)  # tuple的第三个元素是个list，但是list中每个元素的指向是可变的
 
 
 test_list()

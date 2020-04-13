@@ -93,3 +93,7 @@ import os
 
 path = os.path.join('d:/', 'catface/', 'temp.txt')
 print('path:', path)
+
+# exercise
+s = r'《红楼梦》第六十二回 憨湘云醉眠芍药    呆香菱情解石榴裙'
+print('s:', s)

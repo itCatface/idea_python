@@ -13,9 +13,7 @@ def main():
     df = pd.DataFrame(np.random.randn(8, 5), index=dates, columns=list('ABCDE'))
     print(df)
 
-    df1 = pd.DataFrame({'A': 1, 'B': pd.Timestamp('20171213'), 'C': pd.Series(1, index=list(range(4)), dtype='float'),
-                        'D': np.array([3] * 4, dtype='float32'),
-                        'E': pd.Categorical(['police', 'student', 'teacher', 'doctor'])})
+    df1 = pd.DataFrame({'A': 1, 'B': pd.Timestamp('20171213'), 'C': pd.Series(1, index=list(range(4)), dtype='float'), 'D': np.array([3] * 4, dtype='float32'), 'E': pd.Categorical(['police', 'student', 'teacher', 'doctor'])})
     print(df1)
 
     # 1.基本操作
@@ -93,13 +91,8 @@ def main():
     print(df3.groupby('A').sum())
 
     # reshape[数据的交叉分析中常用]
-    df4 = pd.DataFrame({'A': ['one', 'one', 'two', 'three'] * 6,
-                        'B': ['a', 'b', 'c'] * 8,
-                        'C': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'] * 4,
-                        'D': np.random.randn(24),
-                        'E': np.random.randn(24),
-                        'F': [datetime.datetime(2017, i, 1) for i in range(1, 13)] +
-                             [datetime.datetime(2017, i, 15) for i in range(1, 13)]})
+    df4 = pd.DataFrame({'A': ['one', 'one', 'two', 'three'] * 6, 'B': ['a', 'b', 'c'] * 8, 'C': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'] * 4, 'D': np.random.randn(24), 'E': np.random.randn(24),
+                        'F': [datetime.datetime(2017, i, 1) for i in range(1, 13)] + [datetime.datetime(2017, i, 15) for i in range(1, 13)]})
     print(pd.pivot_table(df4, values='D', index=['A', 'B'], columns=['C']))
 
     # 时间序列

@@ -38,8 +38,7 @@ def base():
     plt.fill_between(x, np.abs(x) < 0.5, c, c > 0.5, color="green", alpha=0.2)  # 填充x为x轴，c为y轴
     t = 1
     plt.plot([t, t], [0, np.cos(t)], "y", linewidth=1, linestyle="--")
-    plt.annotate('cos(1)', xy=(t, np.cos(1)), xycoords='data', xytext=(+10, +30), textcoords='offset points',
-                 arrowprops=dict(arrowstyle="->", connectionstyle='arc3,rad=.2'))  # 添加注释
+    plt.annotate('cos(1)', xy=(t, np.cos(1)), xycoords='data', xytext=(+10, +30), textcoords='offset points', arrowprops=dict(arrowstyle="->", connectionstyle='arc3,rad=.2'))  # 添加注释
 
     plt.show()
 
@@ -64,7 +63,6 @@ def scatter():
 
     # plt.show()
 
-
     # def bar():
     #     fig = plt.figure()
     fig.add_subplot(332)
@@ -87,14 +85,12 @@ def scatter():
     n = 20
     Z = np.ones(n)
     Z[-1] *= 2
-    plt.pie(Z, explode=Z * .05, colors=['%f' % (i / float(n)) for i in range(n)],
-            labels=['%.2f' % (i / float(n)) for i in range(n)])
+    plt.pie(Z, explode=Z * .05, colors=['%f' % (i / float(n)) for i in range(n)], labels=['%.2f' % (i / float(n)) for i in range(n)])
 
     plt.gca().set_aspect('equal')
     plt.xticks([]), plt.yticks([])
 
     # plt.show()
-
 
     # def polar():
     #     fig = plt.figure()
@@ -106,7 +102,6 @@ def scatter():
     plt.plot(theta, radii)
     # plt.show()
 
-
     # def heatmap():
     #     fig = plt.figure()
     fig.add_subplot(335)
@@ -114,13 +109,11 @@ def scatter():
     plt.imshow(np.random.rand(3, 3), interpolation='nearest', cmap=cmap, aspect='auto', vmin=0, vmax=1)
     # plt.show()
 
-
     # def threed():
     #     fig = plt.figure()
     ax = fig.add_subplot(336, projection='3d')
     ax.scatter(1, 1, 3, s=100)
     # plt.show()
-
 
     # def hot():
     #     fig = plt.figure()
@@ -139,10 +132,4 @@ def scatter():
 
 if __name__ == '__main__':
     # base()
-    scatter()
-    # bar()
-    # pie()
-    # polar()
-    # heatmap()
-    # threed()
-    # hot()
+    scatter()  # bar()  # pie()  # polar()  # heatmap()  # threed()  # hot()

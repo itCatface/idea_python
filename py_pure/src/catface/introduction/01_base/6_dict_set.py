@@ -4,6 +4,11 @@
 # dict的key必须是不可变对象(list就是可变对象)
 # dict：查找、插入快但是占用内存很大[空间换时间][dict的key必须是不可变对象，因为dict根据key来计算value的存储位置(哈希算法)，字符串、整数等可以，list就不能做为dict的key]
 def _19_dict():
+    # 声明方式
+    d1 = {'name': 'ashe', 'age': 17}
+    d2 = dict(name='ashe', age=17)
+    print(type(d1), type(d2))
+
     info = {'zhangsan': 99, 'lisi': 88, 'wanger': 77}
     print(info)  # {'zhangsan': 99, 'lisi': 88, 'wanger': 77}
     print(info['zhangsan'])  # 99

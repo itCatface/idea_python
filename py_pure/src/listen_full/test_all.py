@@ -154,16 +154,16 @@ def xiami():
 if __name__ == '__main__':
     pass
     # netease()
-    # qq()
+    qq()
     # xiami()
-    netease_flac()
+    # netease_flac()
 
-    n = NetEase()
-    print(n.search("任贤齐"))
+    # n = NetEase()
+    # print(n.search("任贤齐"))
 
-    x = Xiami()
-    print(x.search("任贤齐"))
-
-    q = QQ()
-    print(q.search("任贤齐"))
-    print(q.get_url_by_id("002M8hNI2QgtRY"))
+    # x = Xiami()
+    # print(x.search("任贤齐"))
+    #
+    # q = QQ()
+    # print(q.search("任贤齐"))
+    # print(q.get_url_by_id("002M8hNI2QgtRY"))

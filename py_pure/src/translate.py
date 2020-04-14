@@ -1,15 +1,18 @@
 # -*- coding:utf-8 -*-
+# !/usr/bin/env python
 import requests
 
 
 def trans():
-    words = input("请输入一段要翻译的文字：")
-    params = {'i': words, 'from': 'AUTO', 'to': 'AUTO', 'smartresult': 'dict', 'client': 'fanyideskweb', 'salt': '15867444761376', 'sign': '7c3a043651ded9304837c810ad1be2b8', 'ts': '1586744476137', 'bv': 'bc250de095a39eeec212da07435b6924',
-              'doctype': 'json', 'version': '2.1', 'keyfrom': 'fanyi.web', 'action': 'FY_BY_REALTlME'}
+    words = input("原文 ")
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'}
+    params = {'i': words, 'from': 'AUTO', 'to': 'AUTO', 'smartresult': 'dict', 'client': 'fanyideskweb', 'doctype': 'json', 'version': '2.1', 'keyfrom': 'fanyi.web', 'action': 'lan-select'}
     url = "http://fanyi.youdao.com/translate"
-    r = requests.get(url, params=params)
+    r = requests.get(url, headers=headers, params=params)
     result = r.json()
-    print('原文: %s=>译文: %s || \njson: %s' % (words, '1', result))
+    print('译文', result['translateResult'][0][0]['tgt'])
+    # print('json', result)
+    print()
     trans()
 
 

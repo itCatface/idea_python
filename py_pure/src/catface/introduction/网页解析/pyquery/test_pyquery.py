@@ -1,6 +1,6 @@
 from pyquery import PyQuery as pq
 
-with open('../用于测试解析的网页.html', 'r', encoding='utf-8', errors='ignore') as f:
+with open('用于测试解析的网页.html', 'r', encoding='utf-8', errors='ignore') as f:
     doc = pq(f.read())
 
 # css选择器-选择标签名则不需加任何标记 | id前加# | class前加.

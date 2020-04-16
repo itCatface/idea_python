@@ -3,13 +3,12 @@ import getopt
 import getpass
 import sys
 import argparse
-
-# -处理命令行参数
-# 使用argv[只能从外部运行程序并给出参数-C:\Users\xxx>python C:\xxx\Desktop\7_命令行参数.py 11 22 33 44]
 import click
 import fire
 
 
+# -处理命令行参数
+# 使用argv[只能从外部运行程序并给出参数-C:\Users\xxx>python C:\xxx\Desktop\7_命令行参数.py 11 22 33 44]
 def use_argv():
     args = sys.argv
     print("args's type:", type(args), '||args:', args)

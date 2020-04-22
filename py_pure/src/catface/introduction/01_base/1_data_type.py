@@ -1,4 +1,6 @@
 # -输入和输出
+from fractions import Fraction
+
 width = int(input('请输入宽：'))
 height = int(input('请输入高：'))
 # ,在打印时会用空格代替
@@ -41,3 +43,11 @@ print(10 // 3)
 print(10 % 3)
 
 # -Python对整数和浮点数无大小限制[但超过一定范围就直接表示为无限大(inf)]
+
+# -分数
+f = Fraction(2, 3)
+print(f, f.denominator, f.numerator, type(f))
+# 小数转分数
+f1 = float.as_integer_ratio(0.75)
+f2 = float.as_integer_ratio(0.33)
+print(f1, f2)

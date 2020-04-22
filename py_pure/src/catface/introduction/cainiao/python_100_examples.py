@@ -1,5 +1,6 @@
 ### 1. 四个数字1、2、3、4能组成多少个互不相同且无重复的三位数
 import asyncio
+from fractions import Fraction
 import random
 from collections import deque
 from datetime import datetime
@@ -193,7 +194,7 @@ def ex22():
     pass
 
 
-###- 23. 打印出如下图案（菱形）:
+### 23. 打印出如下图案（菱形）:
 #    *
 #   ***
 #  *****
@@ -202,21 +203,40 @@ def ex22():
 #   ***
 #    *
 def ex23():
-    for i in range(7):
-        for j in range:
-            pass
+    for i in range(1, 5):
+        print(" " * (4 - i) + "*" * ((i - 1) * 2 + 1))
+    for i in range(1, 4):
+        print(" " * i + "*" * ((4 - i) * 2 - 1))
 
 
-###- 24. 有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前20项之和
+### 24. 有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前20项之和
 def ex24():
-    pass
+    a = 2
+    b = 1
+    init_f = Fraction(a, b)
+    s = init_f
+    for i in range(1, 20):
+        a, b = a + b, a
+        f = Fraction(a, b)
+        print('new fraction is:', f, '||a&b:', a, b)
+        s += f
+    print('分数结果：', s, '|| 小数结果：', s.numerator / s.denominator)
 
 
-###- 25. 求1+2!+3!+...+20!的和
+### 25. 求1+2!+3!+...+20!的和
+def jc(n):
+    if n == 1:
+        return 1
+    else:
+        return n * jc(n - 1)
+
+
 def ex25():
     n = int(input('enter digital:'))
+    s = 0
     for i in range(1, n + 1):
-        pass
+        s += jc(i)
+    print('%d阶乘之和：', s)
 
 
 ### 26. 利用递归方法求5!
@@ -227,12 +247,18 @@ def ex26(n):
         return n * ex26(n - 1)
 
 
-###- 27. 利用递归函数调用方式，将所输入的5个字符，以相反顺序打印出来
-def ex27():
-    pass
+### 27. 利用递归函数调用方式，将所输入的5个字符，以相反顺序打印出来
+def ex27(s):
+    length = len(s)
+    if length < 1:
+        return
+    else:
+        length -= 1
+        print(s[length])
+        ex27(s[0:length])
 
 
-### 28. 有5个人坐在一起，问第五个人多少岁？他说比第4个人大2岁。问第4个人岁数，
+### -28. 有5个人坐在一起，问第五个人多少岁？他说比第4个人大2岁。问第4个人岁数，
 # 他说比第3个人大2岁。问第三个人，又说比第2人大两岁。问第2个人，说比第一个人大两岁。
 # 最后问第一个人，他说是10岁。请问第五个人多大？
 def ex28(n):
@@ -260,6 +286,13 @@ def ex30():
 
 ###- 31. 请输入星期几的第一个字母来判断一下是星期几，如果第一个字母一样，则继续判断第二个字母
 def ex31():
+    monday = 'Monday'
+    tuesday = 'Tuesday'
+    wednesday = 'Wednesday'
+    thursday = 'Thursday'
+    friday = 'Friday'
+    saturday = 'Saturday'
+    sunday = 'Sunday'
     s = input('enter what day is today:')
 
 
@@ -276,7 +309,7 @@ def ex33():
     print(','.join(str(n) for n in l))
 
 
-###- 34. 练习函数调用
+### 34. 练习函数调用
 def ex34():
     pass
     pass
@@ -876,4 +909,4 @@ def ex100():
 
 if __name__ == '__main__':
     # print(int('9' * 3) // 33)
-    print(ex99())
+    ex28(10)

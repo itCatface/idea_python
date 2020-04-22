@@ -10,6 +10,21 @@ print('getvalue()获取写入后的str:', f.getvalue())
 f = StringIO('test1 \n test2 \n test3')
 print(f.readlines())
 
+# 字符串截取
+s = '0123456789'
+print('\n开始测试字符串截取', s[0:3])  # 截取第一位到第三位的字符
+print(s[:])  # 截取字符串的全部字符
+print(s[6:])  # 截取第七个字符到结尾
+print(s[:-3])  # 截取从头开始到倒数第三个字符之前
+print(s[2])  # 截取第三个字符
+print(s[-1])  # 截取倒数第一个字符
+print(s[::-1])  # 创造一个与原字符串顺序相反的字符串
+print(s[::-2])  # 创造一个与原字符串顺序相反的字符串&跳2
+print(s[-3:-1])  # 截取倒数第三位与倒数第一位之前的字符
+print(s[-3:])  # 截取倒数第三位到结尾
+print(s[:-5:-3])  # 逆序截取&跳3
+print(s[:-7:-2], '字符串截取测试完成\n')  # 逆序截取&跳2
+
 # 2. BytesIO(操作二进制数据)
 from io import BytesIO
 

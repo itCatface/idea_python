@@ -1,3 +1,5 @@
+# ImportError: cannot import name 'Bar' from 'pyecharts' ==>
+
 import requests
 import json
 from pyecharts import Bar
@@ -36,7 +38,8 @@ bar.add( "点赞数",nickname, liked_count, is_stack=True,mark_line=["min", "max
 bar.render()
 
 content_text = " ".join(content_list)
-wordcloud = WordCloud(font_path=r"C:\simhei.ttf",max_words=200).generate(content_text)
+# wordcloud = WordCloud(font_path=r"C:\simhei.ttf",max_words=200).generate(content_text)
+wordcloud = WordCloud(max_words=200).generate(content_text)
 plt.figure()
 plt.imshow(wordcloud,interpolation='bilinear')
 plt.axis('off')
